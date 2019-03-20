@@ -15,8 +15,6 @@ class Action
 {
 
     public function makePassword()   {
-
-
         $caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"; //posibles caracteres a usar
         $numerodeletras = 8; //numero de letras para generar el texto
         $cadena = ""; //variable para almacenar la cadena generada
@@ -27,7 +25,7 @@ class Action
     }
 
     public function generarEmail($nombres, $apellidos){
-        $carnet = 'DP100113';
+        $carnet = 'HP100114';
         $caracteres = "1234567890"; //posibles caracteres a usar
         $numerodeletras = 6; //numero de letras para generar el texto
         $cadena = ""; //variable para almacenar la cadena generada
@@ -37,23 +35,6 @@ class Action
         $carnet = substr($nombres,0,1).substr($apellidos,0,1).$cadena."@iglesiaolocuilta.com";
         return $carnet;
     }
-    /*public function sendEmail($data, $email, $tema, $subject, $page)
-    {
-        try {
-        $beautymail = app()->make(Beautymail::class);
-        $beautymail->send($page, $data, function ($message) use ($email, $tema, $subject) {
-
-            $message->from('todocyber100@gmail.com', $tema);
-
-            $message->to($email)->subject($subject);
-
-        });
-        } catch (\Exception $e) {
-            
-        }
-
-
-    }*/
 
     public function killSession($idUser)
     {
